@@ -31,6 +31,7 @@ export default {
     onMounted(() => {
       moviesService.getMovies()
       AppState.searchPhrase = window.localStorage.getItem('phrase')
+      query.value = AppState.searchPhrase
       logger.log('search phrase', AppState.searchPhrase)
     })
     return {
