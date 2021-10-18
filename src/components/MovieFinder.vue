@@ -36,7 +36,6 @@ export default {
     })
     return {
       query,
-      phrase: computed(() => AppState.searchPhrase),
       async findMovies() {
         try {
           await moviesService.searchMovies(query.value)
