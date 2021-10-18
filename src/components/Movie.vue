@@ -1,0 +1,58 @@
+<template>
+  <div class="card rounded shadow">
+    <div class="card-body">
+      <div class="text-center">
+        <h3>
+          <u>
+
+            {{ movie.title }}
+          </u>
+        </h3>
+      </div>
+      <div>
+        <div class="d-flex justify-content-between">
+          <p>
+            Made in:
+          </p>
+          {{ movie.year }}
+        </div>
+        <div class="d-flex justify-content-between">
+          <p>
+            Rated:
+          </p>
+          {{ movie.rating }}
+        </div>
+        <div class="d-flex justify-content-between">
+          <p>
+            Run Time:
+          </p>
+          {{ movie.run_time }}
+        </div>
+        <div class="d-flex justify-content-between">
+          <p>
+            Genre:
+          </p>
+          {{ movie.genre }}
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  props: {
+    movie: { type: Object, required: true }
+  },
+  setup() {
+    return {
+
+    }
+  },
+  components: {}
+}
+</script>
+
+<style lang="scss" scoped>
+
+</style>
