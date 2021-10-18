@@ -21,7 +21,7 @@
 import { ref } from '@vue/reactivity'
 import { moviesService } from '../services/MoviesService'
 import Pop from '../utils/Pop'
-import { onMounted } from '@vue/runtime-core'
+import { computed, onMounted } from '@vue/runtime-core'
 import { AppState } from '../AppState'
 import { logger } from '../utils/Logger'
 export default {
@@ -35,6 +35,7 @@ export default {
     })
     return {
       query,
+      phrase: computed(() => AppState.searchPhrase),
       async findMovies() {
         try {
           await moviesService.searchMovies(query.value)
